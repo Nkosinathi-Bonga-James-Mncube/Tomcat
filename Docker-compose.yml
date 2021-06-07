@@ -1,0 +1,10 @@
+version: '3'
+services:
+  web:
+   build: .
+   image: tomcat2
+   ports:
+        - 80:8080
+   container_name: tomcat_task
+   volumes:
+    - ./logs/:/usr/local/tomcat/logs/
