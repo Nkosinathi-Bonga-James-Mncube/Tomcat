@@ -70,12 +70,12 @@
                connectionTimeout="20000"
                redirectPort="8443" />
 
-     <Connector port="8443" protocol="org.apache.coyote.http11.Http11AprProtocol"
+     <Connector port="443" protocol="org.apache.coyote.http11.Http11AprProtocol"
                 maxThreads="200"
                 scheme="https" secure="true" SSLEnabled="true"
-                SSLCertificateFile="/usr/local/ssl/server.crt"
-                SSLCertificateKeyFile="/usr/local/ssl/server.pem"
-                SSLVerifyClient="optional" SSLProtocol="TLSv1+TLSv1.1+TLSv1.2"/>
+                SSLCertificateFile="/etc/ssl/certs/ssl_cert.crt"
+                SSLCertificateKeyFile="/etc/ssl/private/ssl_key.key"
+                SSLVerifyClient="optional" SSLProtocol="TLS"/>
     <!-- A "Connector" using the shared thread pool-->
     <!--
     <Connector executor="tomcatThreadPool"
