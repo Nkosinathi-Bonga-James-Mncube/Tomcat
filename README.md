@@ -1,5 +1,5 @@
 # Tomcat set up with ssl cert
-- A brief overview of ow to setup a tomcat website with ssl certificates
+- A brief overview of how to setup a tomcat website with ssl certificates
 
 # Instructions
 1. Install docker: https://docs.docker.com/engine/install/ubuntu/
