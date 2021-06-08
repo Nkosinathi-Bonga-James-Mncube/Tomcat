@@ -14,11 +14,16 @@ docker run -p8081:8080 tomcat
 docker cp {{ container ID }}:/usr/local/tomcat/conf/server.xml /Desktop/Tomcat
 
 ```
-3. Download file : https://tomcat.apache.org/tomcat-8.5-doc/appdev/sample/sample.war 
-4. Create a Dockerfile to containerize Tomcat. It will include:
- *  Define image use or pulled
- * Expose 8080 port
- * Adding sample file to be host with tomcat
+5. Download file : https://tomcat.apache.org/tomcat-8.5-doc/appdev/sample/sample.war 
+6. Create a Dockerfile to containerize Tomcat. It will include:
+    * Define image used
+    * Adding sample file to be host with tomcat
+    * Create ssl certificate and key
+
+7. Create docker-compose to run container. It contains:
+    * Volume for logs
+    * Container image that been created
+    * Expose port to be used.
 
 # To run setup
 1. Build container image
