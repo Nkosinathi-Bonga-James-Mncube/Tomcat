@@ -1,7 +1,7 @@
 # Tomcat set up with ssl cert
 - A brief overview of how to setup a tomcat website with ssl certificates
 
-# Instructions
+# My approach
 1. Install docker: https://docs.docker.com/engine/install/ubuntu/
 2. Install docker compose: https://docs.docker.com/compose/install/
 3. Pull docker images 
@@ -20,6 +20,7 @@ docker cp {{ container ID }}:/usr/local/tomcat/conf/server.xml /Desktop/Tomcat
  * Expose 8080 port
  * Adding sample file to be host with tomcat
 
+# To run setup
 1. Build container image
 ```
 docker build -t tomcat2 .
@@ -28,6 +29,15 @@ docker build -t tomcat2 .
 ```
 docker-compose up
 ```
+3. To stop Docker compose 
+```
+docker-compose down
+```
+4. To remove container
+```
+docker image rm -f tomcat2
+```
+
 # Reference
 - Create dockerfile container
 
