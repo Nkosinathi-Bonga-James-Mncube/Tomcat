@@ -4,7 +4,8 @@ services:
    build: .
    image: tomcat2
    ports:
-        - 80:8080
+        - "80:8080"
+        - "443:8443"
    container_name: tomcat_task
    volumes:
     - ./logs/:/usr/local/tomcat/logs/
